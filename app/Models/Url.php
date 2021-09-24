@@ -19,6 +19,6 @@ class Url extends Model
 
     public function getShortenedUrlAttribute($value)
     {
-        return env('SHORTENED_URL_PREFIX').$this->slug;
+        return route('destination',['url'=>$this->slug]);
     }
 }
